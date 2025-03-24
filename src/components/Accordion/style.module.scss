@@ -1,0 +1,186 @@
+.accordion {
+    width: 100vw; // Full viewport width
+    padding: 2rem;
+    color: white;
+    background-color: #0e0e0c;
+    font-family: "Arial", sans-serif;
+    box-sizing: border-box;
+}
+
+.accordionTitle {
+    margin-bottom: 3rem;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.accordionTitle h1 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.accordionTitle h1 sup {
+    font-size: 1rem;
+    vertical-align: super;
+}
+
+.introText {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    max-width: 90%;
+    opacity: 0.9;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.itemWrapper {
+    position: relative;
+}
+
+.divider {
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 1.5rem 0;
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.5s ease;
+    transform-origin: left;
+    will-change: transform, opacity;
+}
+
+.itemWrapper:hover .divider {
+    transform: scaleX(1.02);
+    opacity: 0.3;
+}
+
+.accordionItem {
+    width: 100%;
+}
+
+.accordionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    cursor: pointer;
+    padding: 1rem 0;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    will-change: transform;
+}
+
+.accordionHeader:hover {
+    opacity: 0.9;
+}
+
+.accordionHeader.active {
+    padding-bottom: 0.5rem;
+}
+
+.accordionHeader.active h2 {
+    opacity: 1;
+    transform: translateX(5px);
+}
+
+.titleContainer h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 0;
+    opacity: 0.9;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform, opacity;
+}
+
+.accordionHeader:hover .titleContainer h2 {
+    transform: translateX(5px);
+}
+
+.subtitle {
+    font-size: 0.8rem;
+    opacity: 0.7;
+    margin-top: 0.5rem;
+}
+
+.numberContainer .number {
+    font-size: 1.5rem;
+    font-weight: 500;
+    opacity: 0.9;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    display: inline-block;
+    will-change: transform;
+}
+
+.accordionHeader:hover .numberContainer .number {
+    transform: translateX(-5px);
+}
+
+.accordionHeader.active .numberContainer .number {
+    transform: translateX(-8px);
+}
+
+.accordionContent {
+    overflow: hidden;
+    padding: 0.5rem 0 1.5rem;
+    will-change: height, opacity;
+}
+
+.contentInner {
+    will-change: transform, opacity;
+}
+
+.dateContainer {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+.contentText {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    max-width: 90%;
+    opacity: 0.8;
+}
+
+.contentText p {
+    margin-bottom: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .accordion {
+        padding: 1.5rem;
+    }
+
+    .accordionTitle {
+        margin-bottom: 2rem;
+        padding: 0 1rem;
+    }
+
+    .accordionTitle h1 {
+        font-size: 2rem;
+    }
+
+    .introText {
+        max-width: 100%;
+        padding: 0 1rem;
+    }
+
+    .titleContainer h2 {
+        font-size: 1.5rem;
+    }
+
+    .numberContainer .number {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .accordionTitle h1 {
+        font-size: 1.8rem;
+    }
+
+    .introText {
+        font-size: 0.85rem;
+    }
+
+    .titleContainer h2 {
+        font-size: 1.3rem;
+    }
+}

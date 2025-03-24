@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Barlow+Condensed:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    overflow: hidden;
+    cursor: wait;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Noise effect overlay */
+.noise-effect:after {
+    animation: grain 8s steps(10) infinite;
+    background-image: url('/images/noise2.png');
+    content: "";
+    height: 300%;
+    left: -50%;
+    opacity: 0.12;
+    position: fixed;
+    top: -110%;
+    width: 300%;
+    z-index: 100;
+    /* Ensures the noise sits on top */
+}
+
+@keyframes grain {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    10% {
+        transform: translate(-5%, -10%);
+    }
+
+    20% {
+        transform: translate(-15%, 5%);
+    }
+
+    30% {
+        transform: translate(7%, -25%);
+    }
+
+    40% {
+        transform: translate(-5%, 25%);
+    }
+
+    50% {
+        transform: translate(-15%, 10%);
+    }
+
+    60% {
+        transform: translate(15%, 0%);
+    }
+
+    70% {
+        transform: translate(0%, 15%);
+    }
+
+    80% {
+        transform: translate(3%, 35%);
+    }
+
+    90% {
+        transform: translate(-10%, 10%);
+    }
+}
