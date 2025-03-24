@@ -1,5 +1,4 @@
 import styles from './style.module.scss';
-import NavLink from './link'; // if you actually use it
 import { motion } from 'framer-motion';
 import { slide, scale } from '../../animation';
 
