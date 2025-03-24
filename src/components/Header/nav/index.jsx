@@ -3,7 +3,7 @@ import styles from './style.module.scss';
 import { motion } from 'framer-motion';
 import { usePathname } from 'next/navigation';
 import { menuSlide } from '../animation';
-import Link from './Link';
+import NavLink from './Link';
 import Curve from './Curve';
 import Footer from './Footer';
 

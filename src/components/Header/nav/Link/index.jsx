@@ -1,9 +1,9 @@
 import styles from './style.module.scss';
-import Link from 'next/link';
+import NavLink from './link'; // if you actually use it
 import { motion } from 'framer-motion';
 import { slide, scale } from '../../animation';
 
-export default function Link({data, isActive, setSelectedIndicator}) {
+export default function NavLink({data, isActive, setSelectedIndicator}) {
   
     const { title, href, index} = data;
   
